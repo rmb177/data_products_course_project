@@ -86,7 +86,8 @@ shinyUI(navbarPage
         HTML("<ul><li>Cost of Equipment: The cost of the equipment installed.</li>
                   <li>Rebate/Incentive: The incentive received from your utility for installing the equipment.</li>
                   <li>Energy Savings: The expected savings on your utility bill in the first year of equipment use.</li>
-              </ul>")
+              </ul>"),
         
-        )
+        HTML('<p>Code for this application can be found on <a href="http://github.com/rmb177/data_products_course_project">GitHub</a>.')
+    )
 ))
