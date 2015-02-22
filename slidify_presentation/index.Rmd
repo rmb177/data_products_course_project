@@ -1,0 +1,64 @@
+---
+title       : Energy Efficiency Project Comparison Tool
+subtitle    : A Shiny App
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Simple Metrics
+
+1. When evaluating the financial metrics of an energy efficiency project, simple metrics such as Simple Payback (break-even point) and Return on Investment don't provide a complete picture.
+
+2. Two projects, both with 10 year lifetimes:
+
+```{r echo=FALSE}
+c1 <- c("Initial Purchase", "First Year Energy Savings", "ROI", "Simple Payback", "Total Savings")
+c2 <- c(format(500, digits=3), 100, 100/500, 500/100, 10 * 100 - 500)
+c3 <- c(format(5000, digits=4), 1000, 1000/5000, 5000/1000, 10 * 1000 - 5000)
+data <- data.frame(c1, c2, c3)
+colnames(data) <- c("", "Project 1", "Project 2")
+data
+```
+
+
+3. Both projects have a payback of 5 years and an ROI of 20%.
+4. But Project 2 returns $4500 more over its lifetime.
+
+--- .class #id 
+
+## Better Metrics
+
+1. Instead of ROI and Simple Payback, two better measurs are Cash Flows and Net Present Value.
+2. The cash flow metric (http://en.wikipedia.org/wiki/Cash_flow) gives you an idea of how a project will affect the amount of cash available to you or your business. This metric is important because without steady cash flow, your business will not be able to survive.
+3. Net Present Value (http://en.wikipedia.org/wiki/Net_present_value) gives you an idea of cash flows over time when adjusting for inflation and considering other potential investment opportunities. In other words, is this the best use of my money or would it be better served in another type of investment.
+
+
+--- .class #id 
+
+## Better View
+1. Let's take a look at two new projects with the following parameters:
+
+```{r echo=FALSE}
+c1 <- c("Cost of Equipment", "Rebate/Incentive", "First Year Energy Savings")
+c2 <- c(format(5000, digits=4), 500, 2000)
+c3 <- c(format(12500, digits=5), 600, 4000)
+data <- data.frame(c1, c2, c3)
+colnames(data) <- c("", "Project 1", "Project 2")
+data
+```
+
+2. We'll also assume a 5-year project lifetime, a 3% inflation rate, and a potential return of 10% if we invested that money in anothe project.
+
+3. The Energy Efficiency Project Comparison Tool shows that over time, Project 2 is a better investement even with the higher up-front cost (see next slide).
+
+
+--- .class #id 
+
+## Tool Output
+<img src="graph.png"></img>
