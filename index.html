@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Energy Efficiency Project Comparison Tool</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Energy Efficiency Project Comparison Tool">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Energy Efficiency Project Comparison Tool</h1>
+    <h2>A Shiny App</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Simple Metrics</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>When evaluating the financial metrics of an energy efficiency project, simple metrics such as Simple Payback (break-even point) and Return on Investment don&#39;t provide a complete picture.</p></li>
+<li><p>Two projects, both with 10 year lifetimes:</p></li>
+</ol>
+
+<pre><code>##                             Project 1 Project 2
+## 1          Initial Purchase       500      5000
+## 2 First Year Energy Savings       100      1000
+## 3                       ROI       0.2       0.2
+## 4            Simple Payback         5         5
+## 5             Total Savings       500      5000
+</code></pre>
+
+<ol>
+<li>Both projects have a payback of 5 years and an ROI of 20%.</li>
+<li>But Project 2 returns $4500 more over its lifetime.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Better Metrics</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Instead of ROI and Simple Payback, two better measurs are Cash Flows and Net Present Value.</li>
+<li>The cash flow metric (<a href="http://en.wikipedia.org/wiki/Cash_flow">http://en.wikipedia.org/wiki/Cash_flow</a>) gives you an idea of how a project will affect the amount of cash available to you or your business. This metric is important because without steady cash flow, your business will not be able to survive.</li>
+<li>Net Present Value (<a href="http://en.wikipedia.org/wiki/Net_present_value">http://en.wikipedia.org/wiki/Net_present_value</a>) gives you an idea of cash flows over time when adjusting for inflation and considering other potential investment opportunities. In other words, is this the best use of my money or would it be better served in another type of investment.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Better View</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Let&#39;s take a look at two new projects with the following parameters:</li>
+</ol>
+
+<pre><code>##                             Project 1 Project 2
+## 1         Cost of Equipment      5000     12500
+## 2          Rebate/Incentive       500       600
+## 3 First Year Energy Savings      2000      4000
+</code></pre>
+
+<ol>
+<li><p>We&#39;ll also assume a 5-year project lifetime, a 3% inflation rate, and a potential return of 10% if we invested that money in anothe project.</p></li>
+<li><p>The Energy Efficiency Project Comparison Tool shows that over time, Project 2 is a better investement even with the higher up-front cost (see next slide).</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Tool Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="graph.png"></img></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Simple Metrics'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Better Metrics'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Better View'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Tool Output'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
